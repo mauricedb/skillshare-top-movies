@@ -3,13 +3,17 @@ import './App.css';
 
 import MovieCard from './components/MovieCard';
 
-const starWars = { id: 1, title: 'Star Wars' };
+const movies = [
+  { id: 1, title: 'Star Wars' },
+  { id: 2, title: 'Star Trek' },
+  { id: 3, title: 'Blade Runner' }
+];
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <MovieCard movie={starWars} />
+        {movies.map(movie => <MovieCard key={movie.id} movie={movie} />)}
       </div>
     );
   }
