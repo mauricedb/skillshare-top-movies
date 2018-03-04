@@ -4,12 +4,6 @@ import apiKey from './apiKey';
 
 import MovieCard from './components/MovieCard';
 
-const originalMovies = [
-  { id: 1, title: 'Star Wars' },
-  { id: 2, title: 'Star Trek' },
-  { id: 3, title: 'Blade Runner' }
-];
-
 class App extends Component {
   state = { movies: [] };
 
