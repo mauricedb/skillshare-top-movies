@@ -39,7 +39,7 @@ class App extends Component {
             </Typography>
           </Toolbar>
         </AppBar>
-        <div className="App">
+        <div className="movies">
           {movies.map(movie => <MovieCard key={movie.id} movie={movie} />)}
         </div>
       </div>
