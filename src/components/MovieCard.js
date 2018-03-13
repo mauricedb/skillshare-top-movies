@@ -25,6 +25,10 @@ import './MovieCard.css';
 // };
 
 class MovieCard extends React.Component {
+  selectMovie = () => {
+    const { movie, selectMovie } = this.props;
+    selectMovie(movie);
+  };
   render() {
     const { movie } = this.props;
 
@@ -42,7 +46,7 @@ class MovieCard extends React.Component {
           <Typography component="p">{movie.overview}</Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" color="primary">
+          <Button size="small" color="primary" onClick={this.selectMovie}>
             Learn More
           </Button>
         </CardActions>

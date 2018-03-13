@@ -9,6 +9,7 @@ import './App.css';
 import apiKey from './apiKey';
 
 import MovieCard from './components/MovieCard';
+import MovieDialog from './components/MovieDialog';
 
 const styles = {
   root: {
@@ -17,7 +18,10 @@ const styles = {
 };
 
 class App extends Component {
-  state = { movies: [] };
+  state = { movies: [], selectedMovie: null };
+
+  selectMovie = movie => this.setState({ selectedMovie: movie });
+  clearMovie = () => this.setState({ selectedMovie: null });
 
   async componentDidMount() {
     const response = await fetch(
@@ -28,7 +32,7 @@ class App extends Component {
   }
 
   render() {
-    const { movies } = this.state;
+    const { movies, selectedMovie } = this.state;
 
     return (
       <div>
@@ -40,8 +44,15 @@ class App extends Component {
           </Toolbar>
         </AppBar>
         <div className="movies">
-          {movies.map(movie => <MovieCard key={movie.id} movie={movie} />)}
+          {movies.map(movie => (
+            <MovieCard
+              key={movie.id}
+              movie={movie}
+              selectMovie={this.selectMovie}
+            />
+          ))}
         </div>
+        <MovieDialog movie={selectedMovie} handleClose={this.clearMovie} />
       </div>
     );
   }
