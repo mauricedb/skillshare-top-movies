@@ -10,6 +10,6 @@ We are going to start from scratch so no prior React experience is required. I a
 
 ---
 
-[![Building your first React application in 75 minutes or so](./course-title.png)](https://www.skillshare.com/classes/Building-your-first-React-application-in-75-minutes-or-so/1253484924/classroom/discussions)
+[![Building your first React application in 75 minutes or so](./course-title.png)](https://www.skillshare.com/classes/Building-your-first-React-application-in-75-minutes-or-so/1253484924/classroom/discussions) [![Greenkeeper badge](https://badges.greenkeeper.io/mauricedb/skillshare-top-movies.svg)](https://greenkeeper.io/)
 
 You can find the video course on SkillShare [here](https://www.skillshare.com/classes/Building-your-first-React-application-in-75-minutes-or-so/1253484924/classroom/discussions). Enjoy 😄
